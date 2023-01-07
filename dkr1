@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N;
+    int two = 2;
+    int two_minus_one = 2;
+    double sum = 0;
+    do
+    {
+        printf ("Enter value for N");
+        scanf ("%d", &N);
+    } while (N < 1);
+    for (int n = 1; n <= N; n++)
+    {
+        if (n == 1)
+        {
+            two = 2;
+            two_minus_one = 1;
+        }
+        else if (n != 1)
+        {
+            two *= 2;
+            two_minus_one *= 2;
+        }
+        sum += two - two_minus_one;
+    }
+    printf ("Sum = %lf", sum);
+    return 0;
